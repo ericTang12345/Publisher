@@ -7,4 +7,5 @@ target 'Publisher_eric' do
 
   # Pods for Publisher_eric
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManager'
 end

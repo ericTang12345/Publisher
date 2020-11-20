@@ -18,8 +18,9 @@
 		24C2CB0325675718004F926D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0225675718004F926D /* HomeViewController.swift */; };
 		24C2CB0625675730004F926D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0525675730004F926D /* FirebaseManager.swift */; };
 		24C2CB0925675749004F926D /* PublishArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0825675749004F926D /* PublishArticleViewController.swift */; };
-		24C2CB0C2567575E004F926D /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0B2567575E004F926D /* FirebaseData.swift */; };
-		24C2CB0F25675780004F926D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0E25675780004F926D /* UIView+Extension.swift */; };
+		24C2CB0C2567575E004F926D /* ArticlesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0B2567575E004F926D /* ArticlesData.swift */; };
+		24C5EF222567745000A59259 /* ArticlesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5EF212567745000A59259 /* ArticlesDataManager.swift */; };
+		24C5EF2A2567777500A59259 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5EF292567777500A59259 /* HomeTableViewCell.swift */; };
 		668F5AB6FBF5D296AE1CCBEF /* Pods_Publisher_eric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0100033CB1F2C20D6B498272 /* Pods_Publisher_eric.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +39,9 @@
 		24C2CB0225675718004F926D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		24C2CB0525675730004F926D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		24C2CB0825675749004F926D /* PublishArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishArticleViewController.swift; sourceTree = "<group>"; };
-		24C2CB0B2567575E004F926D /* FirebaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
-		24C2CB0E25675780004F926D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		24C2CB0B2567575E004F926D /* ArticlesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesData.swift; sourceTree = "<group>"; };
+		24C5EF212567745000A59259 /* ArticlesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDataManager.swift; sourceTree = "<group>"; };
+		24C5EF292567777500A59259 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		5E104EDAB972073ACCE363A2 /* Pods-Publisher_eric.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Publisher_eric.debug.xcconfig"; path = "Target Support Files/Pods-Publisher_eric/Pods-Publisher_eric.debug.xcconfig"; sourceTree = "<group>"; };
 		BFDB13A364883828AD55929A /* Pods-Publisher_eric.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Publisher_eric.release.xcconfig"; path = "Target Support Files/Pods-Publisher_eric/Pods-Publisher_eric.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,12 +81,11 @@
 			children = (
 				2437959E256751E00053A512 /* AppDelegate.swift */,
 				243795A0256751E00053A512 /* SceneDelegate.swift */,
-				24C2CB0E25675780004F926D /* UIView+Extension.swift */,
-				24BC821225675B28006A7A7E /* UIViewController+Extension.swift */,
-				24C2CB0225675718004F926D /* HomeViewController.swift */,
-				24C2CB0825675749004F926D /* PublishArticleViewController.swift */,
-				24C2CB0525675730004F926D /* FirebaseManager.swift */,
-				24C2CB0B2567575E004F926D /* FirebaseData.swift */,
+				2447A80025676EFC0004CF53 /* Extension */,
+				24980CC12567820E004C737C /* Manager */,
+				2447A7FE25676EB60004CF53 /* Controller */,
+				2447A7FF25676EE90004CF53 /* Firebase */,
+				24C5EF2C2567777900A59259 /* Cell */,
 				243795A4256751E00053A512 /* Main.storyboard */,
 				243795AA256751E20053A512 /* Assets.xcassets */,
 				243795AC256751E20053A512 /* LaunchScreen.storyboard */,
@@ -93,6 +94,48 @@
 				243795B62567523F0053A512 /* GoogleService-Info.plist */,
 			);
 			path = Publisher_eric;
+			sourceTree = "<group>";
+		};
+		2447A7FE25676EB60004CF53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24C2CB0225675718004F926D /* HomeViewController.swift */,
+				24C2CB0825675749004F926D /* PublishArticleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2447A7FF25676EE90004CF53 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				24C2CB0B2567575E004F926D /* ArticlesData.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2447A80025676EFC0004CF53 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24BC821225675B28006A7A7E /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		24980CC12567820E004C737C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				24C2CB0525675730004F926D /* FirebaseManager.swift */,
+				24C5EF212567745000A59259 /* ArticlesDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		24C5EF2C2567777900A59259 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24C5EF292567777500A59259 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A09CB576F5A19615F1B9F7DE /* Pods */ = {
@@ -227,11 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C5EF222567745000A59259 /* ArticlesDataManager.swift in Sources */,
 				24BC821325675B28006A7A7E /* UIViewController+Extension.swift in Sources */,
-				24C2CB0C2567575E004F926D /* FirebaseData.swift in Sources */,
+				24C2CB0C2567575E004F926D /* ArticlesData.swift in Sources */,
 				24C2CB0625675730004F926D /* FirebaseManager.swift in Sources */,
 				24C2CB0925675749004F926D /* PublishArticleViewController.swift in Sources */,
-				24C2CB0F25675780004F926D /* UIView+Extension.swift in Sources */,
+				24C5EF2A2567777500A59259 /* HomeTableViewCell.swift in Sources */,
 				24C2CB0325675718004F926D /* HomeViewController.swift in Sources */,
 				2437959F256751E00053A512 /* AppDelegate.swift in Sources */,
 				243795A1256751E00053A512 /* SceneDelegate.swift in Sources */,
