@@ -41,8 +41,6 @@ class PublishArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
     @IBAction func post(_ sender: UIButton) {
@@ -54,10 +52,9 @@ class PublishArticleViewController: UIViewController {
             return
         }
         
-        ArticlesDataManager.shared.addData(title: title,
-                                           content: content,
-                                           category: category)
+        ArticlesDataManager.shared.addData(title: title, content: content, category: category)
         
+        navigationController?.popViewController(animated: true)
     }
     
 }

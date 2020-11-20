@@ -26,6 +26,8 @@ class FirebaseManager {
     
     private init() {}
     
+    // 只負責監聽是否有新的資料，透過 closure 去做後續的事情。
+    
     func listen(handle: @escaping () -> Void) {
         
         collection.addSnapshotListener { querySnapshot, error in
@@ -40,6 +42,8 @@ class FirebaseManager {
             handle()
         }
     }
+    
+    // 讀取所有資料，資料會放在 closure 裡面。
     
     func read(handle: @escaping ([ArticlesData]) -> Void) {
         
@@ -61,10 +65,14 @@ class FirebaseManager {
         }
     }
     
+    // 轉換時間戳記
+    
     func readTimestamp(timestamp: Any) -> Date {
         
         guard let timestamp = timestamp as? Timestamp else {
+            
             print("轉換時間戳記失敗")
+            
             return Date()
         }
         

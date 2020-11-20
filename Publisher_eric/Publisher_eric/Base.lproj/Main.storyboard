@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g3C-2E-SqO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="g3C-2E-SqO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -33,17 +34,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="AKA小安老師" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go2-nM-c4F">
-                                                    <rect key="frame" x="20" y="72.5" width="291" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="AKA小安老師" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go2-nM-c4F">
+                                                    <rect key="frame" x="20" y="72.5" width="309.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beauty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-EK-2OB">
-                                                    <rect key="frame" x="319" y="72.5" width="75" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" text="Beauty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-EK-2OB" customClass="LabelPadding" customModule="Publisher_eric" customModuleProvider="target">
+                                                    <rect key="frame" x="337.5" y="72.5" width="56.5" height="24"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="​韓歌手IU(李知恩)無論在歌唱方面或是近期的戲劇作品都有亮眼的成績，但俗話說人無完美、美玉微瑕，曾再跟工作人員的互動影片中坦言自己品味很奇怪，近日在IG上分享了宛如「媽媽們青春時代的玉女歌手」超復古穿搭造型，卻意外美出新境界。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-iY-11R">
@@ -60,18 +62,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XNW-EK-2OB" firstAttribute="width" secondItem="CFu-IV-f7l" secondAttribute="width" multiplier="0.181159" id="0b0-4P-Q6q"/>
                                                 <constraint firstItem="85P-lX-UV0" firstAttribute="top" secondItem="go2-nM-c4F" secondAttribute="bottom" constant="8" symbolic="YES" id="0sR-cB-HcI"/>
                                                 <constraint firstItem="eDX-iY-11R" firstAttribute="leading" secondItem="CFu-IV-f7l" secondAttribute="leadingMargin" id="56I-Fb-QTi"/>
                                                 <constraint firstItem="PCB-xq-YmP" firstAttribute="trailing" secondItem="CFu-IV-f7l" secondAttribute="trailingMargin" id="6Sv-J8-9Q2"/>
                                                 <constraint firstItem="go2-nM-c4F" firstAttribute="top" secondItem="PCB-xq-YmP" secondAttribute="bottom" constant="8" symbolic="YES" id="8sl-Kz-AXk"/>
                                                 <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="85P-lX-UV0" secondAttribute="trailing" constant="242.5" id="BhD-3t-grk"/>
+                                                <constraint firstItem="XNW-EK-2OB" firstAttribute="leading" secondItem="go2-nM-c4F" secondAttribute="trailing" constant="8" symbolic="YES" id="La8-Zb-4Gm"/>
                                                 <constraint firstItem="85P-lX-UV0" firstAttribute="leading" secondItem="CFu-IV-f7l" secondAttribute="leadingMargin" id="Pph-LS-ZLo"/>
                                                 <constraint firstItem="XNW-EK-2OB" firstAttribute="trailing" secondItem="CFu-IV-f7l" secondAttribute="trailingMargin" id="V7e-Ca-viD"/>
                                                 <constraint firstItem="go2-nM-c4F" firstAttribute="centerY" secondItem="XNW-EK-2OB" secondAttribute="centerY" id="VFH-TE-ZNJ"/>
                                                 <constraint firstItem="eDX-iY-11R" firstAttribute="top" secondItem="85P-lX-UV0" secondAttribute="bottom" constant="8" symbolic="YES" id="d7N-YV-epT"/>
                                                 <constraint firstItem="go2-nM-c4F" firstAttribute="leading" secondItem="CFu-IV-f7l" secondAttribute="leadingMargin" id="dgM-X3-O45"/>
-                                                <constraint firstItem="XNW-EK-2OB" firstAttribute="leading" secondItem="go2-nM-c4F" secondAttribute="trailing" constant="8" symbolic="YES" id="e1T-JA-z2c"/>
                                                 <constraint firstItem="PCB-xq-YmP" firstAttribute="leading" secondItem="CFu-IV-f7l" secondAttribute="leadingMargin" id="ev4-hP-TOz"/>
                                                 <constraint firstItem="XNW-EK-2OB" firstAttribute="top" secondItem="PCB-xq-YmP" secondAttribute="bottom" constant="8" symbolic="YES" id="gTE-Bh-gt3"/>
                                                 <constraint firstItem="eDX-iY-11R" firstAttribute="trailing" secondItem="CFu-IV-f7l" secondAttribute="trailingMargin" id="nwk-Vt-lds"/>
@@ -131,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zT3-yR-qeP">
-                                <rect key="frame" x="20" y="245.5" width="374" height="405"/>
+                                <rect key="frame" x="20" y="238" width="374" height="420"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygx-Ql-gkf">
                                         <rect key="frame" x="20" y="20" width="334" height="34"/>
@@ -144,7 +145,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N19-aX-nbw">
-                                        <rect key="frame" x="20" y="104" width="334" height="243"/>
+                                        <rect key="frame" x="20" y="104" width="334" height="252"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -152,8 +153,12 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EM-uT-IAJ">
-                                        <rect key="frame" x="20" y="355" width="334" height="30"/>
-                                        <state key="normal" title="Post"/>
+                                        <rect key="frame" x="20" y="364" width="334" height="36"/>
+                                        <color key="backgroundColor" name="indigo"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <state key="normal" title="Post">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="post:" destination="9Ui-ah-vfu" eventType="touchUpInside" id="fI7-h8-U0L"/>
                                         </connections>
@@ -206,6 +211,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aIM-Lu-viK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="indigo"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -219,6 +230,9 @@
     </scenes>
     <resources>
         <image name="Plus" width="128" height="128"/>
+        <namedColor name="indigo">
+            <color red="0.3449999988079071" green="0.33700001239776611" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

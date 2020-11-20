@@ -13,7 +13,7 @@ class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var authorLabel: UILabel!
     
-    @IBOutlet weak var categoryLabel: UILabel! {
+    @IBOutlet weak var categoryLabel: LabelPadding! {
         
         didSet {
                 
@@ -42,12 +42,16 @@ class HomeTableViewCell: UITableViewCell {
         authorLabel.text = data.author.name
         
         categoryLabel.text = data.category
+
+        let color = ArticlesDataManager.shared.categorys[data.category]
+        
+        categoryLabel.textColor = color
         
         contentLabel.text = data.content
         
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "yyyy.MM.dd hh:ss"
+        dateFormatter.dateFormat = "yyyy.MM.dd hh:mm"
         
         createdTimeLabel.text = dateFormatter.string(from: data.createdTime)
     }

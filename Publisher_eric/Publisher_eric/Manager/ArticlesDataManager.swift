@@ -5,7 +5,7 @@
 //  Created by 唐紹桓 on 2020/11/20.
 //
 
-import Foundation
+import UIKit
 
 class ArticlesDataManager {
     
@@ -13,16 +13,21 @@ class ArticlesDataManager {
     
     private init() {}
     
-    let firebaseManeger = FirebaseManager.shared
+    let firebaseManager = FirebaseManager.shared
+    
+    // 所有文章資料，TableView 將依照它顯示
     
     var articlesDatas: [ArticlesData] = []
+    
+    var categorys: [String:UIColor] = [:]
     
     // 讀取 firebase 的資料
     
     func reloadData(handle: @escaping () -> Void) {
         
-        firebaseManeger.read { [weak self] result in
+        firebaseManager.read { [weak self] result in
             
+            // 依照時間排序
             self?.articlesDatas = result.sorted(by: { (first, second) -> Bool in
                 
                 print("firse data time :\(first.createdTime), second data time :\(second.createdTime)")
@@ -38,7 +43,7 @@ class ArticlesDataManager {
     
     func addData(title: String, content: String, category: String) {
         
-        let doc = firebaseManeger.collection.document()
+        let doc = firebaseManager.collection.document()
         
         let data: [String: Any] = [
             "author": [
@@ -48,7 +53,7 @@ class ArticlesDataManager {
             ],
             "title": title,
             "content": content,
-            "createdTime": firebaseManeger.timeStamp,
+            "createdTime": firebaseManager.timeStamp,
             "id": doc.documentID,
             "category": category
         ]

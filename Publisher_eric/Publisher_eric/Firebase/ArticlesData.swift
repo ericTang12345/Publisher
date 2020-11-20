@@ -24,6 +24,8 @@ struct ArticlesData {
 
 extension ArticlesData {
     
+    // 讀取回來的資料轉換
+    
     init (data: [String:Any]) {
         
         self.title = data["title"] as? String ?? ""
