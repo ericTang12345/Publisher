@@ -19,8 +19,6 @@ class ArticlesDataManager {
     
     var articlesDatas: [ArticlesData] = []
     
-    var categorys: [String:UIColor] = [:]
-    
     // 讀取 firebase 的資料
     
     func reloadData(handle: @escaping () -> Void) {

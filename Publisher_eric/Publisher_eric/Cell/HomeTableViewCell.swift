@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol HomeTableViewCellDelegate: AnyObject {
+    
+    func reload(cell: UITableViewCell)
+}
+
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,6 +32,8 @@ class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var createdTimeLabel: UILabel!
     
+    weak var delegate: HomeTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -42,10 +49,11 @@ class HomeTableViewCell: UITableViewCell {
         authorLabel.text = data.author.name
         
         categoryLabel.text = data.category
-
-        let color = ArticlesDataManager.shared.categorys[data.category]
         
-        categoryLabel.textColor = color
+        ColorDataManager.shared.readData(category: data.category) { (color) in
+        
+            self.categoryLabel.textColor = color
+        }
         
         contentLabel.text = data.content
         

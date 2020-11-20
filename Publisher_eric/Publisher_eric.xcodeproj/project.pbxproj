@@ -17,6 +17,7 @@
 		2451082825679EE2007CB734 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451082725679EE2007CB734 /* UILabel+Extension.swift */; };
 		2451082B25679FC4007CB734 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451082A25679FC4007CB734 /* CGFloat+Extension.swift */; };
 		2451082E25679FD3007CB734 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451082D25679FD3007CB734 /* UIColor+Extension.swift */; };
+		245108352567B767007CB734 /* ColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245108342567B767007CB734 /* ColorDataManager.swift */; };
 		24BC821325675B28006A7A7E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC821225675B28006A7A7E /* UIViewController+Extension.swift */; };
 		24C2CB0325675718004F926D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0225675718004F926D /* HomeViewController.swift */; };
 		24C2CB0625675730004F926D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2CB0525675730004F926D /* FirebaseManager.swift */; };
@@ -41,6 +42,7 @@
 		2451082725679EE2007CB734 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		2451082A25679FC4007CB734 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		2451082D25679FD3007CB734 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		245108342567B767007CB734 /* ColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDataManager.swift; sourceTree = "<group>"; };
 		24BC821225675B28006A7A7E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		24C2CB0225675718004F926D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		24C2CB0525675730004F926D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				24C2CB0525675730004F926D /* FirebaseManager.swift */,
 				24C5EF212567745000A59259 /* ArticlesDataManager.swift */,
+				245108342567B767007CB734 /* ColorDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				24C2CB0325675718004F926D /* HomeViewController.swift in Sources */,
 				2437959F256751E00053A512 /* AppDelegate.swift in Sources */,
 				2451082E25679FD3007CB734 /* UIColor+Extension.swift in Sources */,
+				245108352567B767007CB734 /* ColorDataManager.swift in Sources */,
 				243795A1256751E00053A512 /* SceneDelegate.swift in Sources */,
 				243795A9256751E00053A512 /* Publisher_eric.xcdatamodeld in Sources */,
 			);

@@ -54,6 +54,8 @@ class PublishArticleViewController: UIViewController {
         
         ArticlesDataManager.shared.addData(title: title, content: content, category: category)
         
+        ColorDataManager.shared.saveColor(category: category)
+        
         navigationController?.popViewController(animated: true)
     }
     

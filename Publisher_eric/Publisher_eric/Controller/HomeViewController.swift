@@ -72,10 +72,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTableViewCell
         
+        cell.delegate = self
+        
         let data = articlesDataManager.articlesDatas[indexPath.row]
         
         cell.setup(data: data)
         
         return cell
+    }
+}
+
+extension HomeViewController: HomeTableViewCellDelegate {
+    
+    func reload(cell: UITableViewCell) {
+        tableView.reloadData()
     }
 }
